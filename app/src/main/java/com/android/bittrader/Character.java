@@ -4,25 +4,53 @@ package com.android.bittrader;
  * Created by Jason on 8/31/2017.
  */
 
-interface Character {
+class Character {
+    private int health;
+    private double money;
+    private int knowledge;
+
+    public Character(int health, double money, int knowledge) {
+        this.health = health;
+        this.money = money;
+        this.knowledge = knowledge;
+    }
+
     /*
         @param: none
     */
-    void exercise();
+    void exercise(){
+        health++;
+    }
     /*
         @param: none
     */
-    void sleep();
+    void sleep(){
+
+    }
     /*
         @param: none
     */
-    void invest();
+    void invest(){}
     /*
         @param: none
     */
-    void attendEvent();
+    void attendEvent(){}
     /*
         @param: none
     */
-    void research();
+    void research(){
+        knowledge++;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public int getKnowledge() {
+        return knowledge;
+    }
 }

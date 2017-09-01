@@ -1,58 +1,63 @@
 package com.android.bittrader;
 
+import java.lang.*;
+
 /**
  * Created by Jason on 8/31/2017.
  */
 
-public class Investor implements Character {
-    private int health;
-    private double money;
-    private int knowledge;
+public class Investor extends Character {
 
     /*
         @params: none
         Initialized Investor object
      */
-    void Investor(){
-        health = 10;
-        money = 10000.00;
-        knowledge = 0;
+    public Investor() {
+        super(10, 10000.00, 0);
     }
 
     /*
         @params: none
         Increases max health
      */
-    @Override
     public void exercise(){
-        health++;
+        super.exercise();
     }
 
     /*
         @params: none
         Ends the day and resets health
      */
-    @Override
     public void sleep(){
-       health = 10;
+        super.sleep();
     }
 
     /*
         @params: none
         Investment
      */
-    @Override
     public void invest(){
-        health -= 3;
+        super.invest();
     }
 
-    @Override
-    public void attendEvent(){}
+    public void attendEvent(){
+        super.attendEvent();
+    }
 
-    @Override
     public void research(){
-        knowledge++;
+        super.research();
     }
 
+    public int getHealth(){
+        return super.getHealth();
+    }
+
+    public double getMoney(){
+        return super.getMoney();
+    }
+
+    public int getKnowledge(){
+        return super.getKnowledge();
+    }
 
 }
