@@ -35,10 +35,10 @@ class Character {
         @param: none
     */
     void attendEvent(){}
-    /*
-        @param: none
-    */
-    void research(){
+
+    void createMeeting(){}
+
+    void research() {
         knowledge++;
     }
 

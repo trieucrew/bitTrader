@@ -44,6 +44,8 @@ public class Investor extends Character {
         super.attendEvent();
     }
 
+    public void createMeeting() {super.createMeeting();}
+
     public void research(){
         super.research();
     }
